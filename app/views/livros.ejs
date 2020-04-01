@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <%- include("include/head.ejs", {title:"Livros"}) %> 
+<body>
+    <%- include("include/header.ejs") %> 
+
+    <main class="container">
+        <h1>Livros - Livraria</h1>
+        
+        <section class="row">
+            <% livros.forEach(livro => {%> 
+                <!-- card 1 -->
+                <div class="col-md-4">
+                    <article class="card mb-3" style="max-width: 540px;">
+                        <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="/img/<%= livro.capa %>" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title"><%= livro.nome %></h5>
+                                <p class="card-text"><%= livro.descricao %></p>
+                                <p class="card-text"><small class="text-muted"><%= livro.autor %></small></p>
+                                <p class="card-text">R$ <%= livro.preco %></p>
+                                <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                        </div>
+                        </div>
+                    </article>
+                </div>
+            <% }) %> 
+        </section>
+        
+    </main>
+
+    <%- include("include/scripts.ejs") %> 
+</body>
+</html>

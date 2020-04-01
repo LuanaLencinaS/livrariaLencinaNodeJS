@@ -1,0 +1,11 @@
+nav, header {
+    background-color: lightpink;
+}
+
+.search {
+    border-color: mediumpurple;
+}
+.search:hover {
+    background-color: mediumpurple;
+    border-color: mediumpurple;
+}
